@@ -75,11 +75,11 @@
 	
 	var _search2 = _interopRequireDefault(_search);
 	
-	var _math = __webpack_require__(/*! ./routes/math.jsx */ 242);
+	var _math = __webpack_require__(/*! ./routes/math.jsx */ 243);
 	
 	var _math2 = _interopRequireDefault(_math);
 	
-	var _notFound = __webpack_require__(/*! ./routes/not-found.jsx */ 243);
+	var _notFound = __webpack_require__(/*! ./routes/not-found.jsx */ 244);
 	
 	var _notFound2 = _interopRequireDefault(_notFound);
 	
@@ -27958,7 +27958,7 @@
 	        { className: 'navbar navbar-default' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'container-fluid' },
+	          { className: 'container' },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'navbar-header' },
@@ -27982,7 +27982,7 @@
 	            _react2.default.createElement(
 	              'a',
 	              { className: 'navbar-brand', href: '#' },
-	              'Brand'
+	              'Basic Algorithms JS'
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -27990,7 +27990,7 @@
 	            { className: 'collapse navbar-collapse', id: 'bs-example-navbar-collapse-1' },
 	            _react2.default.createElement(
 	              'ul',
-	              { className: 'nav navbar-nav' },
+	              { className: 'nav navbar-nav navbar-right' },
 	              _react2.default.createElement(
 	                _navLink2.default,
 	                { to: '/', activeClassName: 'active' },
@@ -28128,9 +28128,43 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'div',
-	        { className: 'container-fluid' },
-	        'footer'
+	        'footer',
+	        { className: 'container text-center' },
+	        _react2.default.createElement(
+	          'small',
+	          null,
+	          _react2.default.createElement(
+	            'strong',
+	            null,
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://github.com/daringeorgiev/Basic-Algorithms-JS', target: '_blank' },
+	              'Open Source Project'
+	            )
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(
+	            'strong',
+	            null,
+	            'powered by:\xA0'
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://facebook.github.io/react/', target: '_blank' },
+	            'ReactJS'
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(
+	            'strong',
+	            null,
+	            'Author:\xA0'
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://daringeorgiev.github.io/', target: '_blank' },
+	            'Darin Georgiev'
+	          )
+	        )
 	      );
 	    }
 	  }]);
@@ -28159,6 +28193,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _mainWrapper = __webpack_require__(/*! ../components/main-wrapper.jsx */ 242);
+	
+	var _mainWrapper2 = _interopRequireDefault(_mainWrapper);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28181,8 +28219,17 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'jumbotron' },
-	        'Homeee'
+	        null,
+	        _react2.default.createElement(
+	          'header',
+	          { className: 'home-header' },
+	          'Header'
+	        ),
+	        _react2.default.createElement(
+	          _mainWrapper2.default,
+	          null,
+	          'Home Page'
+	        )
 	      );
 	    }
 	  }]);
@@ -28298,6 +28345,68 @@
 
 /***/ },
 /* 242 */
+/*!*****************************************!*\
+  !*** ./src/components/main-wrapper.jsx ***!
+  \*****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 34);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var mainWrapper = function (_Component) {
+	  _inherits(mainWrapper, _Component);
+	
+	  function mainWrapper() {
+	    _classCallCheck(this, mainWrapper);
+	
+	    return _possibleConstructorReturn(this, (mainWrapper.__proto__ || Object.getPrototypeOf(mainWrapper)).apply(this, arguments));
+	  }
+	
+	  _createClass(mainWrapper, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'main',
+	        { className: 'container' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1' },
+	            this.props.children
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return mainWrapper;
+	}(_react.Component);
+	
+	exports.default = mainWrapper;
+
+/***/ },
+/* 243 */
 /*!*****************************!*\
   !*** ./src/routes/math.jsx ***!
   \*****************************/
@@ -28349,7 +28458,7 @@
 	exports.default = MathAlgorithms;
 
 /***/ },
-/* 243 */
+/* 244 */
 /*!**********************************!*\
   !*** ./src/routes/not-found.jsx ***!
   \**********************************/
