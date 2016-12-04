@@ -8,7 +8,7 @@ class container extends Component {
   render() {
     return (
       <div>
-        <NavbarInstance/> {this.props.children}
+        <NavbarInstance /> {this.props.children}
         <Footer />
       </div>
     );

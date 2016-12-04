@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router';
+import NavLink from './nav-link.jsx';
 
 class navbarInstance extends Component {
   render() {
@@ -7,9 +7,14 @@ class navbarInstance extends Component {
       <nav className='navbar navbar-default'>
         <div className='container-fluid'>
           <div className='navbar-header'>
-            <button type='button' className='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
+            <button
+              type='button'
+              className='navbar-toggle collapsed'
+              data-toggle='collapse'
+              data-target='#bs-example-navbar-collapse-1'
+              aria-expanded='false'>
               <span className='sr-only'>Toggle navigation</span>
-              <span className='icon-bar'></span>
+              <span className='icon-bar' />
               <span className='icon-bar'></span>
               <span className='icon-bar'></span>
             </button>
@@ -18,18 +23,10 @@ class navbarInstance extends Component {
 
           <div className='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
             <ul className='nav navbar-nav'>
-              <li >
-                <Link to='/' activeClassName='active'>Home</Link>
-              </li>
-              <li >
-                <Link to='/sorting-algorithms' activeClassName='active'>Sorting</Link>
-              </li>
-              <li >
-                <Link to='/search-algorithms' activeClassName='active'>Search</Link>
-              </li>
-              <li >
-                <Link to='/math-algorithms' activeClassName='active'>Math</Link>
-              </li>
+              <NavLink to='/' activeClassName='active'>Home</NavLink>
+              <NavLink to='/sorting-algorithms' activeClassName='active'>Sorting</NavLink>
+              <NavLink to='/search-algorithms' activeClassName='active'>Search</NavLink>
+              <NavLink to='/math-algorithms' activeClassName='active'>Math</NavLink>
             </ul>
           </div>
         </div>
