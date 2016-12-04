@@ -5,7 +5,7 @@ class navbarInstance extends Component {
   render() {
     return (
       <nav className='navbar navbar-default'>
-        <div className='container-fluid'>
+        <div className='container'>
           <div className='navbar-header'>
             <button
               type='button'
@@ -18,11 +18,11 @@ class navbarInstance extends Component {
               <span className='icon-bar'></span>
               <span className='icon-bar'></span>
             </button>
-            <a className='navbar-brand' href='#'>Brand</a>
+            <a className='navbar-brand' href='#'>Basic Algorithms JS</a>
           </div>
 
           <div className='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
-            <ul className='nav navbar-nav'>
+            <ul className='nav navbar-nav navbar-right'>
               <NavLink to='/' activeClassName='active'>Home</NavLink>
               <NavLink to='/sorting-algorithms' activeClassName='active'>Sorting</NavLink>
               <NavLink to='/search-algorithms' activeClassName='active'>Search</NavLink>
