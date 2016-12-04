@@ -1,3 +1,7 @@
 {
-  "space_after_anon_function": true
+  "indent_size": 2,
+  "quoteconvert": "single",
+  "wrap": 80,
+  "spaceclose": true,
+  "functionname": true
 }

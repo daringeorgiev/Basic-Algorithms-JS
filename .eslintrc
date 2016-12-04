@@ -10,12 +10,15 @@
     "promise"
   ],
   "env": {
-    "browser" : true
+    "browser": true
   },
   "globals": {
-    "__DEV__"      : false,
-    "__TEST__"     : false,
-    "__PROD__"     : false,
-    "__COVERAGE__" : false
+    "__DEV__": false,
+    "__TEST__": false,
+    "__PROD__": false,
+    "__COVERAGE__": false
+  },
+  "rules": {
+    "space-before-function-paren": "off"
   }
 }
