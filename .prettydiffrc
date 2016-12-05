@@ -1,0 +1,7 @@
+{
+  "indent_size": 2,
+  "quote-convert": "single",
+  "wrap": 80,
+  "spaceclose": true,
+  "functionname": true
+}
