@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {render} from 'react-dom';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 
+require('./styles.scss')
+
 import Container from './components/container.jsx';
 
 import Home from './routes/home.jsx';
