@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import MainWrapper from '../components/main-wrapper.jsx'
 import PanelSection from '../components/panel-section.jsx'
 
 class home extends Component {
@@ -13,7 +12,7 @@ class home extends Component {
           </div>
 
         </header>
-        <MainWrapper>
+        <div className='container content'>
           <div className='row'>
             <PanelSection
               to='/sorting-algorithms'
@@ -28,7 +27,7 @@ class home extends Component {
               name='Math Algorithms'
               text='Some math algorithms' />
           </div>
-        </MainWrapper>
+        </div>
       </div>
     );
   }
