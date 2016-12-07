@@ -28395,7 +28395,7 @@
 	      return _react2.default.createElement(_algoList2.default, {
 	        title: 'Sorting algorithms',
 	        icon: 'fa fa-sort-amount-desc',
-	        description: 'A sorting algorithm is an algorithm that puts elements of a list in a certain order. The most-used orders are numerical order and lexicographical order. Efficient sorting is important for optimizing the use of other algorithms (such as search and merge algorithms) which require input data to be in sorted lists; it is also often useful for canonicalizing data and for producing human-readable output. More formally, the output must satisfy two conditions:',
+	        description: 'A sorting algorithm is an algorithm that puts elements of a list in a certain order. The most-used orders are numerical order and lexicographical order. Efficient sorting is important for optimizing the use of other algorithms (such as search and merge algorithms) which require input data to be in sorted lists; it is also often useful for canonicalizing data and for producing human-readable output.',
 	        algoList: ['bubble sort', 'insertion sort', 'quick sort'] });
 	    }
 	  }]);
@@ -28529,6 +28529,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _algoList = __webpack_require__(/*! ../components/algo-list.jsx */ 242);
+	
+	var _algoList2 = _interopRequireDefault(_algoList);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28549,11 +28553,11 @@
 	  _createClass(SearchAlgorithms, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'SearchAlgorithms'
-	      );
+	      return _react2.default.createElement(_algoList2.default, {
+	        title: 'Search algorithms',
+	        icon: 'fa fa-search',
+	        description: 'A search algorithm is an algorithm that retrieves information stored within some data structure. Data structures can include linked lists, arrays, search trees, hash tables, or various other storage methods. The appropriate search algorithm often depends on the data structure being searched.',
+	        algoList: ['binary search', 'breadth-first search', 'depth-first search'] });
 	    }
 	  }]);
 	
