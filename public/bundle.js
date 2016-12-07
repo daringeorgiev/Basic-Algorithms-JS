@@ -83,6 +83,18 @@
 	
 	var _notFound2 = _interopRequireDefault(_notFound);
 	
+	var _bubbleSort = __webpack_require__(/*! ./routes/sorting/bubble-sort.jsx */ 247);
+	
+	var _bubbleSort2 = _interopRequireDefault(_bubbleSort);
+	
+	var _quickSort = __webpack_require__(/*! ./routes/sorting/quick-sort.jsx */ 248);
+	
+	var _quickSort2 = _interopRequireDefault(_quickSort);
+	
+	var _insertionSort = __webpack_require__(/*! ./routes/sorting/insertion-sort.jsx */ 249);
+	
+	var _insertionSort2 = _interopRequireDefault(_insertionSort);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -92,6 +104,8 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	__webpack_require__(/*! ./styles.scss */ 246);
+	
+	// Sorting algorithms
 	
 	var App = function (_Component) {
 	  _inherits(App, _Component);
@@ -112,7 +126,13 @@
 	          _reactRouter.Route,
 	          { path: '/', component: _container2.default },
 	          _react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default }),
-	          _react2.default.createElement(_reactRouter.Route, { path: '/sorting-algorithms', component: _sorting2.default }),
+	          _react2.default.createElement(
+	            _reactRouter.Route,
+	            { path: '/sorting-algorithms', component: _sorting2.default },
+	            _react2.default.createElement(_reactRouter.Route, { path: 'bubble-sort', component: _bubbleSort2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: 'quick-sort', component: _quickSort2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: 'insertion-sort', component: _insertionSort2.default })
+	          ),
 	          _react2.default.createElement(_reactRouter.Route, { path: '/search-algorithms', component: _search2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: '/math-algorithms', component: _math2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: '*', component: _notFound2.default })
@@ -28686,6 +28706,162 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 247 */
+/*!********************************************!*\
+  !*** ./src/routes/sorting/bubble-sort.jsx ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var bubbleSort = function (_Component) {
+	  _inherits(bubbleSort, _Component);
+	
+	  function bubbleSort() {
+	    _classCallCheck(this, bubbleSort);
+	
+	    return _possibleConstructorReturn(this, (bubbleSort.__proto__ || Object.getPrototypeOf(bubbleSort)).apply(this, arguments));
+	  }
+	
+	  _createClass(bubbleSort, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'bubbleSort'
+	      );
+	    }
+	  }]);
+	
+	  return bubbleSort;
+	}(_react.Component);
+	
+	exports.default = bubbleSort;
+
+/***/ },
+/* 248 */
+/*!*******************************************!*\
+  !*** ./src/routes/sorting/quick-sort.jsx ***!
+  \*******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var quickSort = function (_Component) {
+	  _inherits(quickSort, _Component);
+	
+	  function quickSort() {
+	    _classCallCheck(this, quickSort);
+	
+	    return _possibleConstructorReturn(this, (quickSort.__proto__ || Object.getPrototypeOf(quickSort)).apply(this, arguments));
+	  }
+	
+	  _createClass(quickSort, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'quickSort'
+	      );
+	    }
+	  }]);
+	
+	  return quickSort;
+	}(_react.Component);
+	
+	exports.default = quickSort;
+
+/***/ },
+/* 249 */
+/*!***********************************************!*\
+  !*** ./src/routes/sorting/insertion-sort.jsx ***!
+  \***********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var insertionSort = function (_Component) {
+	  _inherits(insertionSort, _Component);
+	
+	  function insertionSort() {
+	    _classCallCheck(this, insertionSort);
+	
+	    return _possibleConstructorReturn(this, (insertionSort.__proto__ || Object.getPrototypeOf(insertionSort)).apply(this, arguments));
+	  }
+	
+	  _createClass(insertionSort, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'insertionSort'
+	      );
+	    }
+	  }]);
+	
+	  return insertionSort;
+	}(_react.Component);
+	
+	exports.default = insertionSort;
 
 /***/ }
 /******/ ]);
