@@ -71,15 +71,15 @@
 	
 	var _sorting2 = _interopRequireDefault(_sorting);
 	
-	var _search = __webpack_require__(/*! ./routes/search.jsx */ 242);
+	var _search = __webpack_require__(/*! ./routes/search.jsx */ 243);
 	
 	var _search2 = _interopRequireDefault(_search);
 	
-	var _math = __webpack_require__(/*! ./routes/math.jsx */ 243);
+	var _math = __webpack_require__(/*! ./routes/math.jsx */ 244);
 	
 	var _math2 = _interopRequireDefault(_math);
 	
-	var _notFound = __webpack_require__(/*! ./routes/not-found.jsx */ 244);
+	var _notFound = __webpack_require__(/*! ./routes/not-found.jsx */ 245);
 	
 	var _notFound2 = _interopRequireDefault(_notFound);
 	
@@ -91,7 +91,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(/*! ./styles.scss */ 245);
+	__webpack_require__(/*! ./styles.scss */ 246);
 	
 	var App = function (_Component) {
 	  _inherits(App, _Component);
@@ -28368,6 +28368,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _algoList = __webpack_require__(/*! ../components/algo-list.jsx */ 242);
+	
+	var _algoList2 = _interopRequireDefault(_algoList);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28388,11 +28392,11 @@
 	  _createClass(SortingAlgorithms, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'SortingAlgorithms'
-	      );
+	      return _react2.default.createElement(_algoList2.default, {
+	        title: 'Sorting algorithms',
+	        icon: 'fa fa-sort-amount-desc',
+	        description: 'A sorting algorithm is an algorithm that puts elements of a list in a certain order. The most-used orders are numerical order and lexicographical order. Efficient sorting is important for optimizing the use of other algorithms (such as search and merge algorithms) which require input data to be in sorted lists; it is also often useful for canonicalizing data and for producing human-readable output. More formally, the output must satisfy two conditions:',
+	        algoList: ['bubble sort', 'insertion sort', 'quick sort'] });
 	    }
 	  }]);
 	
@@ -28403,6 +28407,111 @@
 
 /***/ },
 /* 242 */
+/*!**************************************!*\
+  !*** ./src/components/algo-list.jsx ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 34);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 172);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var algoList = function (_Component) {
+	  _inherits(algoList, _Component);
+	
+	  function algoList() {
+	    _classCallCheck(this, algoList);
+	
+	    return _possibleConstructorReturn(this, (algoList.__proto__ || Object.getPrototypeOf(algoList)).apply(this, arguments));
+	  }
+	
+	  _createClass(algoList, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'main',
+	        { className: 'container' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              _react2.default.createElement('i', { className: this.props.icon, 'aria-hidden': 'true' }),
+	              '\xA0',
+	              this.props.title
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              this.props.description
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'row' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1' },
+	                _react2.default.createElement(
+	                  'h3',
+	                  null,
+	                  'List of some ',
+	                  this.props.title.toLowerCase(),
+	                  ':'
+	                ),
+	                _react2.default.createElement(
+	                  'ul',
+	                  { className: 'list-group' },
+	                  this.props.algoList.map(function (item) {
+	                    return _react2.default.createElement(
+	                      'li',
+	                      { className: 'list-group-item text-center', key: item },
+	                      _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/' },
+	                        item
+	                      )
+	                    );
+	                  })
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return algoList;
+	}(_react.Component);
+	
+	exports.default = algoList;
+
+/***/ },
+/* 243 */
 /*!*******************************!*\
   !*** ./src/routes/search.jsx ***!
   \*******************************/
@@ -28454,7 +28563,7 @@
 	exports.default = SearchAlgorithms;
 
 /***/ },
-/* 243 */
+/* 244 */
 /*!*****************************!*\
   !*** ./src/routes/math.jsx ***!
   \*****************************/
@@ -28506,7 +28615,7 @@
 	exports.default = MathAlgorithms;
 
 /***/ },
-/* 244 */
+/* 245 */
 /*!**********************************!*\
   !*** ./src/routes/not-found.jsx ***!
   \**********************************/
@@ -28562,7 +28671,7 @@
 	exports.default = notFound;
 
 /***/ },
-/* 245 */
+/* 246 */
 /*!*************************!*\
   !*** ./src/styles.scss ***!
   \*************************/
