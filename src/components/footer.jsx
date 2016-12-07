@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class footer extends Component {
   render() {
     return (
-      <footer className='text-center'>
+      <footer id='footer' className='footer text-center'>
         <small>
           <strong>
             <a href='https://github.com/daringeorgiev/Basic-Algorithms-JS' target='_blank'>
