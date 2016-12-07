@@ -12,6 +12,7 @@ class panelSection extends Component {
             </Link>
           </div>
           <div className='panel-body'>
+            <i className={this.props.icon} aria-hidden='true' />&nbsp;
             {this.props.text}
           </div>
         </div>

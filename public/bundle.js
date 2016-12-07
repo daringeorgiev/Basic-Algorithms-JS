@@ -28235,7 +28235,7 @@
 	            ),
 	            _react2.default.createElement(
 	              'p',
-	              null,
+	              { className: 'lead' },
 	              'Show in javascript some of basic algorithms'
 	            )
 	          )
@@ -28249,15 +28249,18 @@
 	            _react2.default.createElement(_panelSection2.default, {
 	              to: '/sorting-algorithms',
 	              name: 'Sorting Algorithms',
-	              text: 'Some sorting algorithms' }),
+	              icon: 'fa fa-sort-amount-desc fa-2x',
+	              text: 'A sorting algorithm is an algorithm that puts elements of a list in a certain order' }),
 	            _react2.default.createElement(_panelSection2.default, {
 	              to: '/search-algorithms',
 	              name: 'Search Algorithms',
-	              text: 'Some search algorithms' }),
+	              icon: 'fa fa-search fa-2x',
+	              text: 'A search algorithm is an algorithm that retrieves information stored within some data structure' }),
 	            _react2.default.createElement(_panelSection2.default, {
 	              to: '/math-algorithms',
 	              name: 'Math Algorithms',
-	              text: 'Some math algorithms' })
+	              icon: 'fa fa-percent fa-2x',
+	              text: 'Algorithms perform calculation, data processing, and/or automated reasoning tasks' })
 	          )
 	        )
 	      );
@@ -28332,6 +28335,8 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'panel-body' },
+	            _react2.default.createElement('i', { className: this.props.icon, 'aria-hidden': 'true' }),
+	            '\xA0',
 	            this.props.text
 	          )
 	        )
