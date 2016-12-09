@@ -23,7 +23,8 @@ class App extends Component {
       <Router history={hashHistory}>
         <Route path='/' component={Container}>
           <IndexRoute component={Home} />
-          <Route path='/sorting-algorithms' component={SortingAlgorithms}>
+          <Route path='/sorting-algorithms'>
+            <IndexRoute component={SortingAlgorithms} />
             <Route path='bubble-sort' component={BubbleSort} />
             <Route path='quick-sort' component={QuickSort} />
             <Route path='insertion-sort' component={InsertionSort} />
