@@ -1,5 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 
+// Rewrite class from npm react-gist https://github.com/tleunen/react-gist
+
 class gist extends Component {
   componentDidMount() {
     this._updateIframeContent();
