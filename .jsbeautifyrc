@@ -1,4 +1,5 @@
 {
+  "insize": 2,
   "indent_size": 2,
   "quoteconvert": "single",
   "wrap": 80,

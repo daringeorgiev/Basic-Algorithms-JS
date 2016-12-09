@@ -71,29 +71,53 @@
 	
 	var _sorting2 = _interopRequireDefault(_sorting);
 	
-	var _search = __webpack_require__(/*! ./routes/search.jsx */ 248);
+	var _search = __webpack_require__(/*! ./routes/search.jsx */ 249);
 	
 	var _search2 = _interopRequireDefault(_search);
 	
-	var _math = __webpack_require__(/*! ./routes/math.jsx */ 249);
+	var _math = __webpack_require__(/*! ./routes/math.jsx */ 250);
 	
 	var _math2 = _interopRequireDefault(_math);
 	
-	var _notFound = __webpack_require__(/*! ./routes/not-found.jsx */ 250);
+	var _notFound = __webpack_require__(/*! ./routes/not-found.jsx */ 251);
 	
 	var _notFound2 = _interopRequireDefault(_notFound);
 	
-	var _bubbleSort = __webpack_require__(/*! ./routes/sorting/bubble-sort.jsx */ 253);
+	var _bubbleSort = __webpack_require__(/*! ./routes/sorting/bubble-sort.jsx */ 252);
 	
 	var _bubbleSort2 = _interopRequireDefault(_bubbleSort);
 	
-	var _quickSort = __webpack_require__(/*! ./routes/sorting/quick-sort.jsx */ 254);
+	var _quickSort = __webpack_require__(/*! ./routes/sorting/quick-sort.jsx */ 253);
 	
 	var _quickSort2 = _interopRequireDefault(_quickSort);
 	
-	var _insertionSort = __webpack_require__(/*! ./routes/sorting/insertion-sort.jsx */ 255);
+	var _insertionSort = __webpack_require__(/*! ./routes/sorting/insertion-sort.jsx */ 254);
 	
 	var _insertionSort2 = _interopRequireDefault(_insertionSort);
+	
+	var _binarySearch = __webpack_require__(/*! ./routes/search/binary-search.jsx */ 255);
+	
+	var _binarySearch2 = _interopRequireDefault(_binarySearch);
+	
+	var _breadthFirstSearch = __webpack_require__(/*! ./routes/search/breadth-first-search.jsx */ 256);
+	
+	var _breadthFirstSearch2 = _interopRequireDefault(_breadthFirstSearch);
+	
+	var _depthFirstSearch = __webpack_require__(/*! ./routes/search/depth-first-search.jsx */ 257);
+	
+	var _depthFirstSearch2 = _interopRequireDefault(_depthFirstSearch);
+	
+	var _fibonacciNumbersSequence = __webpack_require__(/*! ./routes/math/fibonacci-numbers-sequence.jsx */ 258);
+	
+	var _fibonacciNumbersSequence2 = _interopRequireDefault(_fibonacciNumbersSequence);
+	
+	var _greatestCommonDivisor = __webpack_require__(/*! ./routes/math/greatest-common-divisor.jsx */ 259);
+	
+	var _greatestCommonDivisor2 = _interopRequireDefault(_greatestCommonDivisor);
+	
+	var _leastCommonMultiple = __webpack_require__(/*! ./routes/math/least-common-multiple.jsx */ 260);
+	
+	var _leastCommonMultiple2 = _interopRequireDefault(_leastCommonMultiple);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -103,9 +127,18 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(/*! ./styles.scss */ 251);
+	__webpack_require__(/*! ./styles.scss */ 261);
+	
+	// Main routes
+	
 	
 	// Sorting algorithms
+	
+	
+	// Search algorithms
+	
+	
+	// Math algorithms
 	
 	var App = function (_Component) {
 	  _inherits(App, _Component);
@@ -134,8 +167,22 @@
 	            _react2.default.createElement(_reactRouter.Route, { path: 'quick-sort', component: _quickSort2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: 'insertion-sort', component: _insertionSort2.default })
 	          ),
-	          _react2.default.createElement(_reactRouter.Route, { path: '/search-algorithms', component: _search2.default }),
-	          _react2.default.createElement(_reactRouter.Route, { path: '/math-algorithms', component: _math2.default }),
+	          _react2.default.createElement(
+	            _reactRouter.Route,
+	            { path: '/search-algorithms' },
+	            _react2.default.createElement(_reactRouter.IndexRoute, { component: _search2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: 'binary-search', component: _binarySearch2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: 'breadth-first-search', component: _breadthFirstSearch2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: 'depth-first-search', component: _depthFirstSearch2.default })
+	          ),
+	          _react2.default.createElement(
+	            _reactRouter.Route,
+	            { path: '/math-algorithms' },
+	            _react2.default.createElement(_reactRouter.IndexRoute, { component: _math2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: 'fibonacci-numbers-sequence', component: _fibonacciNumbersSequence2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: 'greatest-common-divisor', component: _greatestCommonDivisor2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: 'least-common-multiple', component: _leastCommonMultiple2.default })
+	          ),
 	          _react2.default.createElement(_reactRouter.Route, { path: '*', component: _notFound2.default })
 	        )
 	      );
@@ -28447,7 +28494,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _algoList = __webpack_require__(/*! ../components/algo-list.jsx */ 252);
+	var _algoList = __webpack_require__(/*! ../components/algo-list.jsx */ 248);
 	
 	var _algoList2 = _interopRequireDefault(_algoList);
 	
@@ -28486,183 +28533,6 @@
 
 /***/ },
 /* 248 */
-/*!*******************************!*\
-  !*** ./src/routes/search.jsx ***!
-  \*******************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _algoList = __webpack_require__(/*! ../components/algo-list.jsx */ 252);
-	
-	var _algoList2 = _interopRequireDefault(_algoList);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var SearchAlgorithms = function (_Component) {
-	  _inherits(SearchAlgorithms, _Component);
-	
-	  function SearchAlgorithms() {
-	    _classCallCheck(this, SearchAlgorithms);
-	
-	    return _possibleConstructorReturn(this, (SearchAlgorithms.__proto__ || Object.getPrototypeOf(SearchAlgorithms)).apply(this, arguments));
-	  }
-	
-	  _createClass(SearchAlgorithms, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(_algoList2.default, {
-	        title: 'Search algorithms',
-	        icon: 'fa fa-search',
-	        description: 'A search algorithm is an algorithm that retrieves information stored within some data structure. Data structures can include linked lists, arrays, search trees, hash tables, or various other storage methods. The appropriate search algorithm often depends on the data structure being searched.',
-	        algoList: ['Binary search', 'Breadth-first search', 'Depth-first search'] });
-	    }
-	  }]);
-	
-	  return SearchAlgorithms;
-	}(_react.Component);
-	
-	exports.default = SearchAlgorithms;
-
-/***/ },
-/* 249 */
-/*!*****************************!*\
-  !*** ./src/routes/math.jsx ***!
-  \*****************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _algoList = __webpack_require__(/*! ../components/algo-list.jsx */ 252);
-	
-	var _algoList2 = _interopRequireDefault(_algoList);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var MathAlgorithms = function (_Component) {
-	  _inherits(MathAlgorithms, _Component);
-	
-	  function MathAlgorithms() {
-	    _classCallCheck(this, MathAlgorithms);
-	
-	    return _possibleConstructorReturn(this, (MathAlgorithms.__proto__ || Object.getPrototypeOf(MathAlgorithms)).apply(this, arguments));
-	  }
-	
-	  _createClass(MathAlgorithms, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(_algoList2.default, {
-	        title: 'Math algorithms',
-	        icon: 'fa fa-percent',
-	        description: 'In mathematics and computer science, an algorithm is a self-contained step-by-step set of operations to be performed. Algorithms perform calculation, data processing, and/or automated reasoning tasks.',
-	        algoList: ['Fibonacci numbers sequence', 'Greatest common divisor', 'Least common multiple'] });
-	    }
-	  }]);
-	
-	  return MathAlgorithms;
-	}(_react.Component);
-	
-	exports.default = MathAlgorithms;
-
-/***/ },
-/* 250 */
-/*!**********************************!*\
-  !*** ./src/routes/not-found.jsx ***!
-  \**********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var notFound = function (_Component) {
-	  _inherits(notFound, _Component);
-	
-	  function notFound() {
-	    _classCallCheck(this, notFound);
-	
-	    return _possibleConstructorReturn(this, (notFound.__proto__ || Object.getPrototypeOf(notFound)).apply(this, arguments));
-	  }
-	
-	  _createClass(notFound, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          '404 This page is not found!22'
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return notFound;
-	}(_react.Component);
-	
-	exports.default = notFound;
-
-/***/ },
-/* 251 */
-/*!*************************!*\
-  !*** ./src/styles.scss ***!
-  \*************************/
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 252 */
 /*!**************************************!*\
   !*** ./src/components/algo-list.jsx ***!
   \**************************************/
@@ -28767,7 +28637,175 @@
 	exports.default = algoList;
 
 /***/ },
-/* 253 */
+/* 249 */
+/*!*******************************!*\
+  !*** ./src/routes/search.jsx ***!
+  \*******************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _algoList = __webpack_require__(/*! ../components/algo-list.jsx */ 248);
+	
+	var _algoList2 = _interopRequireDefault(_algoList);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var SearchAlgorithms = function (_Component) {
+	  _inherits(SearchAlgorithms, _Component);
+	
+	  function SearchAlgorithms() {
+	    _classCallCheck(this, SearchAlgorithms);
+	
+	    return _possibleConstructorReturn(this, (SearchAlgorithms.__proto__ || Object.getPrototypeOf(SearchAlgorithms)).apply(this, arguments));
+	  }
+	
+	  _createClass(SearchAlgorithms, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(_algoList2.default, {
+	        title: 'Search algorithms',
+	        icon: 'fa fa-search',
+	        description: 'A search algorithm is an algorithm that retrieves information stored within some data structure. Data structures can include linked lists, arrays, search trees, hash tables, or various other storage methods. The appropriate search algorithm often depends on the data structure being searched.',
+	        algoList: ['Binary search', 'Breadth-first search', 'Depth-first search'] });
+	    }
+	  }]);
+	
+	  return SearchAlgorithms;
+	}(_react.Component);
+	
+	exports.default = SearchAlgorithms;
+
+/***/ },
+/* 250 */
+/*!*****************************!*\
+  !*** ./src/routes/math.jsx ***!
+  \*****************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _algoList = __webpack_require__(/*! ../components/algo-list.jsx */ 248);
+	
+	var _algoList2 = _interopRequireDefault(_algoList);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var MathAlgorithms = function (_Component) {
+	  _inherits(MathAlgorithms, _Component);
+	
+	  function MathAlgorithms() {
+	    _classCallCheck(this, MathAlgorithms);
+	
+	    return _possibleConstructorReturn(this, (MathAlgorithms.__proto__ || Object.getPrototypeOf(MathAlgorithms)).apply(this, arguments));
+	  }
+	
+	  _createClass(MathAlgorithms, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(_algoList2.default, {
+	        title: 'Math algorithms',
+	        icon: 'fa fa-percent',
+	        description: 'In mathematics and computer science, an algorithm is a self-contained step-by-step set of operations to be performed. Algorithms perform calculation, data processing, and/or automated reasoning tasks.',
+	        algoList: ['Fibonacci numbers sequence', 'Greatest common divisor', 'Least common multiple'] });
+	    }
+	  }]);
+	
+	  return MathAlgorithms;
+	}(_react.Component);
+	
+	exports.default = MathAlgorithms;
+
+/***/ },
+/* 251 */
+/*!**********************************!*\
+  !*** ./src/routes/not-found.jsx ***!
+  \**********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var notFound = function (_Component) {
+	  _inherits(notFound, _Component);
+	
+	  function notFound() {
+	    _classCallCheck(this, notFound);
+	
+	    return _possibleConstructorReturn(this, (notFound.__proto__ || Object.getPrototypeOf(notFound)).apply(this, arguments));
+	  }
+	
+	  _createClass(notFound, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          '404 This page is not found!22'
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return notFound;
+	}(_react.Component);
+	
+	exports.default = notFound;
+
+/***/ },
+/* 252 */
 /*!********************************************!*\
   !*** ./src/routes/sorting/bubble-sort.jsx ***!
   \********************************************/
@@ -28819,7 +28857,7 @@
 	exports.default = bubbleSort;
 
 /***/ },
-/* 254 */
+/* 253 */
 /*!*******************************************!*\
   !*** ./src/routes/sorting/quick-sort.jsx ***!
   \*******************************************/
@@ -28871,7 +28909,7 @@
 	exports.default = quickSort;
 
 /***/ },
-/* 255 */
+/* 254 */
 /*!***********************************************!*\
   !*** ./src/routes/sorting/insertion-sort.jsx ***!
   \***********************************************/
@@ -28921,6 +28959,327 @@
 	}(_react.Component);
 	
 	exports.default = insertionSort;
+
+/***/ },
+/* 255 */
+/*!*********************************************!*\
+  !*** ./src/routes/search/binary-search.jsx ***!
+  \*********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var binarySearch = function (_Component) {
+	  _inherits(binarySearch, _Component);
+	
+	  function binarySearch() {
+	    _classCallCheck(this, binarySearch);
+	
+	    return _possibleConstructorReturn(this, (binarySearch.__proto__ || Object.getPrototypeOf(binarySearch)).apply(this, arguments));
+	  }
+	
+	  _createClass(binarySearch, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'Binary search'
+	      );
+	    }
+	  }]);
+	
+	  return binarySearch;
+	}(_react.Component);
+	
+	exports.default = binarySearch;
+
+/***/ },
+/* 256 */
+/*!****************************************************!*\
+  !*** ./src/routes/search/breadth-first-search.jsx ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var breadthFirstSearch = function (_Component) {
+	  _inherits(breadthFirstSearch, _Component);
+	
+	  function breadthFirstSearch() {
+	    _classCallCheck(this, breadthFirstSearch);
+	
+	    return _possibleConstructorReturn(this, (breadthFirstSearch.__proto__ || Object.getPrototypeOf(breadthFirstSearch)).apply(this, arguments));
+	  }
+	
+	  _createClass(breadthFirstSearch, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'Breadth-first search'
+	      );
+	    }
+	  }]);
+	
+	  return breadthFirstSearch;
+	}(_react.Component);
+	
+	exports.default = breadthFirstSearch;
+
+/***/ },
+/* 257 */
+/*!**************************************************!*\
+  !*** ./src/routes/search/depth-first-search.jsx ***!
+  \**************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var depthFirstSearch = function (_Component) {
+	  _inherits(depthFirstSearch, _Component);
+	
+	  function depthFirstSearch() {
+	    _classCallCheck(this, depthFirstSearch);
+	
+	    return _possibleConstructorReturn(this, (depthFirstSearch.__proto__ || Object.getPrototypeOf(depthFirstSearch)).apply(this, arguments));
+	  }
+	
+	  _createClass(depthFirstSearch, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'Depth-first search'
+	      );
+	    }
+	  }]);
+	
+	  return depthFirstSearch;
+	}(_react.Component);
+	
+	exports.default = depthFirstSearch;
+
+/***/ },
+/* 258 */
+/*!********************************************************!*\
+  !*** ./src/routes/math/fibonacci-numbers-sequence.jsx ***!
+  \********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var fibonacciNumbersSequence = function (_Component) {
+	  _inherits(fibonacciNumbersSequence, _Component);
+	
+	  function fibonacciNumbersSequence() {
+	    _classCallCheck(this, fibonacciNumbersSequence);
+	
+	    return _possibleConstructorReturn(this, (fibonacciNumbersSequence.__proto__ || Object.getPrototypeOf(fibonacciNumbersSequence)).apply(this, arguments));
+	  }
+	
+	  _createClass(fibonacciNumbersSequence, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'Fibonacci numbers sequence'
+	      );
+	    }
+	  }]);
+	
+	  return fibonacciNumbersSequence;
+	}(_react.Component);
+	
+	exports.default = fibonacciNumbersSequence;
+
+/***/ },
+/* 259 */
+/*!*****************************************************!*\
+  !*** ./src/routes/math/greatest-common-divisor.jsx ***!
+  \*****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var greatestCommonDivisor = function (_Component) {
+	  _inherits(greatestCommonDivisor, _Component);
+	
+	  function greatestCommonDivisor() {
+	    _classCallCheck(this, greatestCommonDivisor);
+	
+	    return _possibleConstructorReturn(this, (greatestCommonDivisor.__proto__ || Object.getPrototypeOf(greatestCommonDivisor)).apply(this, arguments));
+	  }
+	
+	  _createClass(greatestCommonDivisor, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'Greatest common divisor'
+	      );
+	    }
+	  }]);
+	
+	  return greatestCommonDivisor;
+	}(_react.Component);
+	
+	exports.default = greatestCommonDivisor;
+
+/***/ },
+/* 260 */
+/*!***************************************************!*\
+  !*** ./src/routes/math/least-common-multiple.jsx ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var leastCommonMultiple = function (_Component) {
+	  _inherits(leastCommonMultiple, _Component);
+	
+	  function leastCommonMultiple() {
+	    _classCallCheck(this, leastCommonMultiple);
+	
+	    return _possibleConstructorReturn(this, (leastCommonMultiple.__proto__ || Object.getPrototypeOf(leastCommonMultiple)).apply(this, arguments));
+	  }
+	
+	  _createClass(leastCommonMultiple, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'Least common multiple'
+	      );
+	    }
+	  }]);
+	
+	  return leastCommonMultiple;
+	}(_react.Component);
+	
+	exports.default = leastCommonMultiple;
+
+/***/ },
+/* 261 */
+/*!*************************!*\
+  !*** ./src/styles.scss ***!
+  \*************************/
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
