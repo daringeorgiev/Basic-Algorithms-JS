@@ -28386,26 +28386,30 @@
 	        { className: 'section col-md-4 col-sm-6' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'panel panel-default' },
+	          { className: 'panel panel-default panel-section' },
+	          _react2.default.createElement('i', { className: this.props.icon, 'aria-hidden': 'true' }),
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'panel-heading' },
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: this.props.to },
-	              _react2.default.createElement(
-	                'h3',
-	                { className: 'panel-title' },
-	                this.props.name
-	              )
-	            )
+	            'h3',
+	            { className: 'panel-title' },
+	            this.props.name
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'panel-body' },
-	            _react2.default.createElement('i', { className: this.props.icon, 'aria-hidden': 'true' }),
-	            '\xA0',
-	            this.props.text
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              this.props.text
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: this.props.to, className: 'btn btn-primary' },
+	                'Learn more'
+	              )
+	            )
 	          )
 	        )
 	      );

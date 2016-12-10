@@ -25,4 +25,10 @@ body {
   position: absolute;
   width: 100%; }
 
+.panel-section {
+  padding: 2rem;
+  text-align: center; }
+  .panel-section i {
+    padding: 1rem; }
+
 /*# sourceMappingURL=styles.css.map*/
