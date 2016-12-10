@@ -28554,16 +28554,20 @@
 	                  'ul',
 	                  { className: 'list-group' },
 	                  this.props.algoList.map(function (item) {
+	                    // Generate item route
+	                    var itemRoute = this.props.title.toLowerCase().replace(/ /g, '-');
+	                    itemRoute += '/' + item.toLowerCase().replace(/ /g, '-');
+	
 	                    return _react2.default.createElement(
 	                      'li',
 	                      { className: 'list-group-item text-center', key: item },
 	                      _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: '/' },
+	                        { to: itemRoute },
 	                        item
 	                      )
 	                    );
-	                  })
+	                  }.bind(this))
 	                )
 	              )
 	            )
