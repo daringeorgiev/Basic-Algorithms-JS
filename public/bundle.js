@@ -28765,9 +28765,9 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _gist = __webpack_require__(/*! ../../components/gist.jsx */ 403);
+	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 404);
 	
-	var _gist2 = _interopRequireDefault(_gist);
+	var _algorithm2 = _interopRequireDefault(_algorithm);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -28792,7 +28792,11 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_gist2.default, { id: '973520942aa88f1a5b739623383b238d' })
+	        _react2.default.createElement(_algorithm2.default, {
+	          name: 'Bubble Sort',
+	          description: 'Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list. Although the algorithm is simple, it is too slow and impractical for most problems even when compared to insertion sort. It can be practical if the input is usually in sorted order but may occasionally have some out-of-order elements nearly in position.',
+	          moreLink: 'https://en.wikipedia.org/wiki/Bubble_sort',
+	          gistId: '973520942aa88f1a5b739623383b238d' })
 	      );
 	    }
 	  }]);
@@ -29467,6 +29471,88 @@
 	};
 	
 	exports.default = gist;
+
+/***/ },
+/* 404 */
+/*!**************************************!*\
+  !*** ./src/components/algorithm.jsx ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _gist = __webpack_require__(/*! ./gist.jsx */ 403);
+	
+	var _gist2 = _interopRequireDefault(_gist);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var algorithm = function (_Component) {
+	  _inherits(algorithm, _Component);
+	
+	  function algorithm() {
+	    _classCallCheck(this, algorithm);
+	
+	    return _possibleConstructorReturn(this, (algorithm.__proto__ || Object.getPrototypeOf(algorithm)).apply(this, arguments));
+	  }
+	
+	  _createClass(algorithm, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              this.props.name
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '\xA0',
+	              this.props.description,
+	              '\xA0',
+	              _react2.default.createElement(
+	                'a',
+	                { href: this.props.moreLink, target: '_blank' },
+	                'More...'
+	              )
+	            ),
+	            'Example:',
+	            _react2.default.createElement(_gist2.default, { id: this.props.gistId })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return algorithm;
+	}(_react.Component);
+	
+	exports.default = algorithm;
 
 /***/ }
 /******/ ]);
