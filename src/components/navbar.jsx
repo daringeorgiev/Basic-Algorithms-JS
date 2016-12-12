@@ -27,6 +27,7 @@ class navbarInstance extends Component {
               <NavLink to='/sorting-algorithms' activeClassName='active'>Sorting</NavLink>
               <NavLink to='/search-algorithms' activeClassName='active'>Search</NavLink>
               <NavLink to='/math-algorithms' activeClassName='active'>Math</NavLink>
+              <NavLink to='/resources' activeClassName='active'>Resources</NavLink>
             </ul>
           </div>
         </div>

@@ -11,6 +11,7 @@ import Home from './routes/home.jsx';
 import SortingAlgorithms from './routes/sorting.jsx';
 import SearchAlgorithms from './routes/search.jsx';
 import MathAlgorithms from './routes/math.jsx';
+import Resources from './routes/resources.jsx'
 import NotFound from './routes/not-found.jsx';
 
 // Sorting algorithms
@@ -52,6 +53,7 @@ class App extends Component {
             <Route path='greatest-common-divisor' component={GreatestCommonDivisor} />
             <Route path='least-common-multiple' component={LeastCommonMultiple} />
           </Route>
+          <Route path='resources' component={Resources} />
           <Route path='*' component={NotFound} />
         </Route>
       </Router>
