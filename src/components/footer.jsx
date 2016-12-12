@@ -15,7 +15,8 @@ class footer extends Component {
           <strong>
             powered by:&nbsp;
           </strong>
-          <a href='https://facebook.github.io/react/' target='_blank'>ReactJS</a>
+          <a href='https://facebook.github.io/react/' target='_blank'>ReactJS</a>&nbsp;and&nbsp;
+          <a href='https://webpack.github.io/' target='_blank'>Webpack</a>
           <br />
 
           <strong>
