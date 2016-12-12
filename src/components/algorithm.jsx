@@ -8,7 +8,7 @@ class algorithm extends Component {
         <div className='row'>
           <div className='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
             <h2>{this.props.name}</h2>
-            <p>&nbsp;{this.props.description}&nbsp;
+            <p className='description'>&nbsp;{this.props.description}&nbsp;
               <a href={this.props.moreLink} target="_blank">More...</a>
             </p>
             Example:

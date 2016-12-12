@@ -28544,7 +28544,7 @@
 	            ),
 	            _react2.default.createElement(
 	              'p',
-	              null,
+	              { className: 'description' },
 	              this.props.description
 	            ),
 	            _react2.default.createElement(
@@ -28879,7 +28879,7 @@
 	            ),
 	            _react2.default.createElement(
 	              'p',
-	              null,
+	              { className: 'description' },
 	              '\xA0',
 	              this.props.description,
 	              '\xA0',

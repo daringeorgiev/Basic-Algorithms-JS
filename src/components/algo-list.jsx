@@ -9,7 +9,7 @@ class algoList extends Component {
         <div className='row'>
           <div className='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
             <h2><i className={this.props.icon} aria-hidden='true' />&nbsp;{this.props.title}</h2>
-            <p>{this.props.description}</p>
+            <p className='description'>{this.props.description}</p>
             <div className='row'>
               <div className='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
                 <h3>List of some {this.props.title.toLowerCase()}:</h3>
