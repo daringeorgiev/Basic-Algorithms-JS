@@ -79,47 +79,47 @@
 	
 	var _math2 = _interopRequireDefault(_math);
 	
-	var _resources = __webpack_require__(/*! ./routes/resources.jsx */ 258);
+	var _resources = __webpack_require__(/*! ./routes/resources.jsx */ 245);
 	
 	var _resources2 = _interopRequireDefault(_resources);
 	
-	var _notFound = __webpack_require__(/*! ./routes/not-found.jsx */ 245);
+	var _notFound = __webpack_require__(/*! ./routes/not-found.jsx */ 246);
 	
 	var _notFound2 = _interopRequireDefault(_notFound);
 	
-	var _bubbleSort = __webpack_require__(/*! ./routes/sorting/bubble-sort.jsx */ 246);
+	var _bubbleSort = __webpack_require__(/*! ./routes/sorting/bubble-sort.jsx */ 247);
 	
 	var _bubbleSort2 = _interopRequireDefault(_bubbleSort);
 	
-	var _quickSort = __webpack_require__(/*! ./routes/sorting/quick-sort.jsx */ 249);
+	var _quickSort = __webpack_require__(/*! ./routes/sorting/quick-sort.jsx */ 250);
 	
 	var _quickSort2 = _interopRequireDefault(_quickSort);
 	
-	var _insertionSort = __webpack_require__(/*! ./routes/sorting/insertion-sort.jsx */ 250);
+	var _insertionSort = __webpack_require__(/*! ./routes/sorting/insertion-sort.jsx */ 251);
 	
 	var _insertionSort2 = _interopRequireDefault(_insertionSort);
 	
-	var _binarySearch = __webpack_require__(/*! ./routes/search/binary-search.jsx */ 251);
+	var _binarySearch = __webpack_require__(/*! ./routes/search/binary-search.jsx */ 252);
 	
 	var _binarySearch2 = _interopRequireDefault(_binarySearch);
 	
-	var _breadthFirstSearch = __webpack_require__(/*! ./routes/search/breadth-first-search.jsx */ 252);
+	var _breadthFirstSearch = __webpack_require__(/*! ./routes/search/breadth-first-search.jsx */ 253);
 	
 	var _breadthFirstSearch2 = _interopRequireDefault(_breadthFirstSearch);
 	
-	var _depthFirstSearch = __webpack_require__(/*! ./routes/search/depth-first-search.jsx */ 253);
+	var _depthFirstSearch = __webpack_require__(/*! ./routes/search/depth-first-search.jsx */ 254);
 	
 	var _depthFirstSearch2 = _interopRequireDefault(_depthFirstSearch);
 	
-	var _fibonacciNumbersSequence = __webpack_require__(/*! ./routes/math/fibonacci-numbers-sequence.jsx */ 254);
+	var _fibonacciNumbersSequence = __webpack_require__(/*! ./routes/math/fibonacci-numbers-sequence.jsx */ 255);
 	
 	var _fibonacciNumbersSequence2 = _interopRequireDefault(_fibonacciNumbersSequence);
 	
-	var _greatestCommonDivisor = __webpack_require__(/*! ./routes/math/greatest-common-divisor.jsx */ 255);
+	var _greatestCommonDivisor = __webpack_require__(/*! ./routes/math/greatest-common-divisor.jsx */ 256);
 	
 	var _greatestCommonDivisor2 = _interopRequireDefault(_greatestCommonDivisor);
 	
-	var _leastCommonMultiple = __webpack_require__(/*! ./routes/math/least-common-multiple.jsx */ 256);
+	var _leastCommonMultiple = __webpack_require__(/*! ./routes/math/least-common-multiple.jsx */ 257);
 	
 	var _leastCommonMultiple2 = _interopRequireDefault(_leastCommonMultiple);
 	
@@ -131,7 +131,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(/*! ./styles.scss */ 257);
+	__webpack_require__(/*! ./styles.scss */ 258);
 	
 	// Main routes
 	
@@ -28717,6 +28717,92 @@
 /***/ },
 /* 245 */
 /*!**********************************!*\
+  !*** ./src/routes/resources.jsx ***!
+  \**********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var resources = function (_Component) {
+	  _inherits(resources, _Component);
+	
+	  function resources() {
+	    _classCallCheck(this, resources);
+	
+	    return _possibleConstructorReturn(this, (resources.__proto__ || Object.getPrototypeOf(resources)).apply(this, arguments));
+	  }
+	
+	  _createClass(resources, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Resources'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'description' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://github.com/mgechev/javascript-algorithms', target: '_blank' },
+	                  'https://github.com/mgechev/javascript-algorithms'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://en.wikipedia.org/wiki/Algorithm', target: '_blank' },
+	                  'https://en.wikipedia.org/wiki/Algorithm'
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return resources;
+	}(_react.Component);
+	
+	exports.default = resources;
+
+/***/ },
+/* 246 */
+/*!**********************************!*\
   !*** ./src/routes/not-found.jsx ***!
   \**********************************/
 /***/ function(module, exports, __webpack_require__) {
@@ -28771,7 +28857,7 @@
 	exports.default = notFound;
 
 /***/ },
-/* 246 */
+/* 247 */
 /*!********************************************!*\
   !*** ./src/routes/sorting/bubble-sort.jsx ***!
   \********************************************/
@@ -28789,7 +28875,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 247);
+	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 248);
 	
 	var _algorithm2 = _interopRequireDefault(_algorithm);
 	
@@ -28831,7 +28917,7 @@
 	exports.default = bubbleSort;
 
 /***/ },
-/* 247 */
+/* 248 */
 /*!**************************************!*\
   !*** ./src/components/algorithm.jsx ***!
   \**************************************/
@@ -28849,7 +28935,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _gist = __webpack_require__(/*! ./gist.jsx */ 248);
+	var _gist = __webpack_require__(/*! ./gist.jsx */ 249);
 	
 	var _gist2 = _interopRequireDefault(_gist);
 	
@@ -28913,7 +28999,7 @@
 	exports.default = algorithm;
 
 /***/ },
-/* 248 */
+/* 249 */
 /*!*********************************!*\
   !*** ./src/components/gist.jsx ***!
   \*********************************/
@@ -29007,7 +29093,7 @@
 	exports.default = gist;
 
 /***/ },
-/* 249 */
+/* 250 */
 /*!*******************************************!*\
   !*** ./src/routes/sorting/quick-sort.jsx ***!
   \*******************************************/
@@ -29025,7 +29111,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 247);
+	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 248);
 	
 	var _algorithm2 = _interopRequireDefault(_algorithm);
 	
@@ -29056,7 +29142,7 @@
 	          name: 'Quicksort',
 	          description: 'Quicksort (sometimes called partition-exchange sort) is an efficient sorting algorithm, serving as a systematic method for placing the elements of an array in order. Developed by Tony Hoare in 1959, with his work published in 1961, it is still a commonly used algorithm for sorting. Quicksort is a comparison sort, meaning that it can sort items of any type for which a "less-than" relation (formally, a total order) is defined. In efficient implementations it is not a stable sort, meaning that the relative order of equal sort items is not preserved. Quicksort can operate in-place on an array, requiring small additional amounts of memory to perform the sorting. ',
 	          moreLink: 'https://en.wikipedia.org/wiki/Quicksort',
-	          gistId: '' })
+	          gistId: 'e113789c422892fea9b6bd9ecba5f634' })
 	      );
 	    }
 	  }]);
@@ -29067,7 +29153,7 @@
 	exports.default = quickSort;
 
 /***/ },
-/* 250 */
+/* 251 */
 /*!***********************************************!*\
   !*** ./src/routes/sorting/insertion-sort.jsx ***!
   \***********************************************/
@@ -29085,7 +29171,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 247);
+	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 248);
 	
 	var _algorithm2 = _interopRequireDefault(_algorithm);
 	
@@ -29116,7 +29202,7 @@
 	          name: 'Insertion sort',
 	          description: 'Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, insertion sort provides several advantages: Simple implementation, Efficient for (quite) small data sets and More efficient in practice than most other simple quadratic algorithms such as selection sort or bubble sort.  ',
 	          moreLink: 'https://en.wikipedia.org/wiki/Insertion_sort',
-	          gistId: '' })
+	          gistId: '404f15f6e32e8130d1d21c5a7f085642' })
 	      );
 	    }
 	  }]);
@@ -29127,7 +29213,7 @@
 	exports.default = insertionSort;
 
 /***/ },
-/* 251 */
+/* 252 */
 /*!*********************************************!*\
   !*** ./src/routes/search/binary-search.jsx ***!
   \*********************************************/
@@ -29145,7 +29231,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 247);
+	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 248);
 	
 	var _algorithm2 = _interopRequireDefault(_algorithm);
 	
@@ -29176,7 +29262,7 @@
 	          name: 'Binary search',
 	          description: 'In computer science, binary search, also known as half-interval search or logarithmic search, is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array; if they are unequal, the half in which the target cannot lie is eliminated and the search continues on the remaining half until it is successful. ',
 	          moreLink: 'https://en.wikipedia.org/wiki/Binary_search_algorithm',
-	          gistId: '' })
+	          gistId: '69962d849a25184a3e4171c131e68b2b' })
 	      );
 	    }
 	  }]);
@@ -29187,7 +29273,7 @@
 	exports.default = binarySearch;
 
 /***/ },
-/* 252 */
+/* 253 */
 /*!****************************************************!*\
   !*** ./src/routes/search/breadth-first-search.jsx ***!
   \****************************************************/
@@ -29205,7 +29291,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 247);
+	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 248);
 	
 	var _algorithm2 = _interopRequireDefault(_algorithm);
 	
@@ -29247,7 +29333,7 @@
 	exports.default = breadthFirstSearch;
 
 /***/ },
-/* 253 */
+/* 254 */
 /*!**************************************************!*\
   !*** ./src/routes/search/depth-first-search.jsx ***!
   \**************************************************/
@@ -29265,7 +29351,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 247);
+	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 248);
 	
 	var _algorithm2 = _interopRequireDefault(_algorithm);
 	
@@ -29307,7 +29393,7 @@
 	exports.default = depthFirstSearch;
 
 /***/ },
-/* 254 */
+/* 255 */
 /*!********************************************************!*\
   !*** ./src/routes/math/fibonacci-numbers-sequence.jsx ***!
   \********************************************************/
@@ -29325,7 +29411,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 247);
+	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 248);
 	
 	var _algorithm2 = _interopRequireDefault(_algorithm);
 	
@@ -29367,7 +29453,7 @@
 	exports.default = fibonacciNumbersSequence;
 
 /***/ },
-/* 255 */
+/* 256 */
 /*!*****************************************************!*\
   !*** ./src/routes/math/greatest-common-divisor.jsx ***!
   \*****************************************************/
@@ -29385,7 +29471,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 247);
+	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 248);
 	
 	var _algorithm2 = _interopRequireDefault(_algorithm);
 	
@@ -29427,7 +29513,7 @@
 	exports.default = greatestCommonDivisor;
 
 /***/ },
-/* 256 */
+/* 257 */
 /*!***************************************************!*\
   !*** ./src/routes/math/least-common-multiple.jsx ***!
   \***************************************************/
@@ -29445,7 +29531,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 247);
+	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 248);
 	
 	var _algorithm2 = _interopRequireDefault(_algorithm);
 	
@@ -29487,99 +29573,13 @@
 	exports.default = leastCommonMultiple;
 
 /***/ },
-/* 257 */
+/* 258 */
 /*!*************************!*\
   !*** ./src/styles.scss ***!
   \*************************/
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 258 */
-/*!**********************************!*\
-  !*** ./src/routes/resources.jsx ***!
-  \**********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var resources = function (_Component) {
-	  _inherits(resources, _Component);
-	
-	  function resources() {
-	    _classCallCheck(this, resources);
-	
-	    return _possibleConstructorReturn(this, (resources.__proto__ || Object.getPrototypeOf(resources)).apply(this, arguments));
-	  }
-	
-	  _createClass(resources, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'container' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'row' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1' },
-	            _react2.default.createElement(
-	              'h2',
-	              null,
-	              'Resources'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'description' },
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                _react2.default.createElement(
-	                  'a',
-	                  { href: 'https://github.com/mgechev/javascript-algorithms', target: '_blank' },
-	                  'https://github.com/mgechev/javascript-algorithms'
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                _react2.default.createElement(
-	                  'a',
-	                  { href: 'https://en.wikipedia.org/wiki/Algorithm', target: '_blank' },
-	                  'https://en.wikipedia.org/wiki/Algorithm'
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return resources;
-	}(_react.Component);
-	
-	exports.default = resources;
 
 /***/ }
 /******/ ]);
