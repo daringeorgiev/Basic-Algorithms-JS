@@ -1,7 +1,7 @@
 {
   "name": "basic-algorithms-js",
   "version": "1.0.0",
-  "description": "Show in javascript some of basic algorithms",
+  "description": "Some basic algorithms, written in JavaScript",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

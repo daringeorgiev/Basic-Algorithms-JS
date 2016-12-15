@@ -1,6 +1,6 @@
 # Basic-Algorithms-JS
 
-Some of basic algorithms, written in JavaScript
+Some basic algorithms, written in JavaScript
 
 You can visit the web-application at: [https://basic-algorithms-js.herokuapp.com](https://basic-algorithms-js.herokuapp.com)
 

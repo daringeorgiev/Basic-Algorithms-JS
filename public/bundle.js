@@ -28320,7 +28320,7 @@
 	            _react2.default.createElement(
 	              'p',
 	              { className: 'lead' },
-	              'Show in javascript some of basic algorithms'
+	              'Some basic algorithms, written in JavaScript'
 	            )
 	          )
 	        ),

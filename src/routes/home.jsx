@@ -8,7 +8,7 @@ class home extends Component {
         <header className='header'>
           <div className='container text-center header__container'>
             <h1>Basic Algorithms JS</h1>
-            <p className='lead'>Show in javascript some of basic algorithms</p>
+            <p className='lead'>Some basic algorithms, written in JavaScript</p>
           </div>
 
         </header>
