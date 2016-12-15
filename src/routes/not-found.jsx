@@ -3,8 +3,9 @@ import React, {Component} from 'react';
 class notFound extends Component {
   render() {
     return (
-      <div>
-        <h1>404 This page is not found!22</h1>
+      <div className='container text-center'>
+        <i className='fa fa-exclamation-triangle fa-5x' aria-hidden='true' />
+        <h1>404 This page is not found!</h1>
       </div>
     );
   }

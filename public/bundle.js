@@ -28841,11 +28841,12 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'container text-center' },
+	        _react2.default.createElement('i', { className: 'fa fa-exclamation-triangle fa-5x', 'aria-hidden': 'true' }),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          '404 This page is not found!22'
+	          '404 This page is not found!'
 	        )
 	      );
 	    }
