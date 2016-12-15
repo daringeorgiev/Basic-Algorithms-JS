@@ -29442,7 +29442,7 @@
 	          name: 'Fibonacci numbers',
 	          description: 'In mathematics, the Fibonacci numbers are the numbers in the following integer sequence, called the Fibonacci sequence, and characterized by the fact that every number after the first two is the sum of the two preceding ones. ',
 	          moreLink: 'https://en.wikipedia.org/wiki/Fibonacci_number',
-	          gistId: '' })
+	          gistId: 'bfcf78e993f7a6425e93532731c5f4d4' })
 	      );
 	    }
 	  }]);
@@ -29502,7 +29502,7 @@
 	          name: 'Greatest common divisor (gcd)',
 	          description: 'In mathematics, the greatest common divisor (gcd) of two or more integers, when at least one of them is not zero, is the largest positive integer that divides the numbers without a remainder. For example, the GCD of 8 and 12 is 4. The greatest common divisor is also known as the greatest common factor (gcf), highest common factor (hcf), greatest common measure (gcm), or highest common divisor. ',
 	          moreLink: 'https://en.wikipedia.org/wiki/Greatest_common_divisor',
-	          gistId: '' })
+	          gistId: 'ad767926583e311db00dbbfdbbaad14b' })
 	      );
 	    }
 	  }]);

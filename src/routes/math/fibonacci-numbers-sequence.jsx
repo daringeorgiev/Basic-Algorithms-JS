@@ -9,7 +9,7 @@ class fibonacciNumbersSequence extends Component {
           name='Fibonacci numbers'
           description='In mathematics, the Fibonacci numbers are the numbers in the following integer sequence, called the Fibonacci sequence, and characterized by the fact that every number after the first two is the sum of the two preceding ones. '
           moreLink='https://en.wikipedia.org/wiki/Fibonacci_number'
-          gistId='' />
+          gistId='bfcf78e993f7a6425e93532731c5f4d4' />
       </div>
     );
   }

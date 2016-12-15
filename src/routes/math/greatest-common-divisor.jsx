@@ -9,7 +9,7 @@ class greatestCommonDivisor extends Component {
           name='Greatest common divisor (gcd)'
           description='In mathematics, the greatest common divisor (gcd) of two or more integers, when at least one of them is not zero, is the largest positive integer that divides the numbers without a remainder. For example, the GCD of 8 and 12 is 4. The greatest common divisor is also known as the greatest common factor (gcf), highest common factor (hcf), greatest common measure (gcm), or highest common divisor. '
           moreLink='https://en.wikipedia.org/wiki/Greatest_common_divisor'
-          gistId='' />
+          gistId='ad767926583e311db00dbbfdbbaad14b' />
       </div>
     );
   }
