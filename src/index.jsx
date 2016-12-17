@@ -16,6 +16,7 @@ import NotFound from './routes/not-found.jsx';
 
 // Sorting algorithms
 import BubbleSort from './routes/sorting/bubble-sort.jsx';
+import SelectionSort from './routes/sorting/selection-sort.jsx';
 import QuickSort from './routes/sorting/quick-sort.jsx';
 import InsertionSort from './routes/sorting/insertion-sort.jsx';
 
@@ -38,6 +39,7 @@ class App extends Component {
           <Route path='/sorting-algorithms'>
             <IndexRoute component={SortingAlgorithms} />
             <Route path='bubble-sort' component={BubbleSort} />
+            <Route path='selection-sort' component={SelectionSort} />
             <Route path='quick-sort' component={QuickSort} />
             <Route path='insertion-sort' component={InsertionSort} />
           </Route>

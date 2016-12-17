@@ -91,6 +91,10 @@
 	
 	var _bubbleSort2 = _interopRequireDefault(_bubbleSort);
 	
+	var _selectionSort = __webpack_require__(/*! ./routes/sorting/selection-sort.jsx */ 259);
+	
+	var _selectionSort2 = _interopRequireDefault(_selectionSort);
+	
 	var _quickSort = __webpack_require__(/*! ./routes/sorting/quick-sort.jsx */ 250);
 	
 	var _quickSort2 = _interopRequireDefault(_quickSort);
@@ -168,6 +172,7 @@
 	            { path: '/sorting-algorithms' },
 	            _react2.default.createElement(_reactRouter.IndexRoute, { component: _sorting2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: 'bubble-sort', component: _bubbleSort2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: 'selection-sort', component: _selectionSort2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: 'quick-sort', component: _quickSort2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: 'insertion-sort', component: _insertionSort2.default })
 	          ),
@@ -28484,7 +28489,7 @@
 	        title: 'Sorting algorithms',
 	        icon: 'fa fa-sort-amount-desc',
 	        description: 'A sorting algorithm is an algorithm that puts elements of a list in a certain order. The most-used orders are numerical order and lexicographical order. Efficient sorting is important for optimizing the use of other algorithms (such as search and merge algorithms) which require input data to be in sorted lists; it is also often useful for canonicalizing data and for producing human-readable output.',
-	        algoList: ['Bubble sort', 'Insertion sort', 'Quick sort'] });
+	        algoList: ['Bubble sort', 'Selection Sort', 'Insertion sort', 'Quick sort'] });
 	    }
 	  }]);
 	
@@ -29581,6 +29586,66 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 259 */
+/*!***********************************************!*\
+  !*** ./src/routes/sorting/selection-sort.jsx ***!
+  \***********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 248);
+	
+	var _algorithm2 = _interopRequireDefault(_algorithm);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var selectionSort = function (_Component) {
+	  _inherits(selectionSort, _Component);
+	
+	  function selectionSort() {
+	    _classCallCheck(this, selectionSort);
+	
+	    return _possibleConstructorReturn(this, (selectionSort.__proto__ || Object.getPrototypeOf(selectionSort)).apply(this, arguments));
+	  }
+	
+	  _createClass(selectionSort, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_algorithm2.default, {
+	          name: 'Selection Sort',
+	          description: 'In computer science, selection sort is a sorting algorithm, specifically an in-place comparison sort. It has O(n2) time complexity, making it inefficient on large lists, and generally performs worse than the similar insertion sort. Selection sort is noted for its simplicity, and it has performance advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited.',
+	          moreLink: 'https://en.wikipedia.org/wiki/Selection_sort',
+	          gistId: '35848fd336e3a6a0d4be830e7c3db2f0' })
+	      );
+	    }
+	  }]);
+	
+	  return selectionSort;
+	}(_react.Component);
+	
+	exports.default = selectionSort;
 
 /***/ }
 /******/ ]);
