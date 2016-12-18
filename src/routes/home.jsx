@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import PanelSection from '../components/panel-section.jsx'
 
 class home extends Component {
@@ -32,8 +32,8 @@ class home extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default home;
+export default home

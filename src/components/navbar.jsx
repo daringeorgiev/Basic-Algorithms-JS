@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import NavLink from './nav-link.jsx';
+import React, {Component} from 'react'
+import NavLink from './nav-link.jsx'
 
 class navbarInstance extends Component {
   render() {
@@ -15,8 +15,8 @@ class navbarInstance extends Component {
               aria-expanded='false'>
               <span className='sr-only'>Toggle navigation</span>
               <span className='icon-bar' />
-              <span className='icon-bar'></span>
-              <span className='icon-bar'></span>
+              <span className='icon-bar' />
+              <span className='icon-bar' />
             </button>
             <a className='navbar-brand' href='#'>Basic Algorithms JS</a>
           </div>
@@ -36,4 +36,4 @@ class navbarInstance extends Component {
   }
 }
 
-export default navbarInstance;
+export default navbarInstance

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import Algorithm from '../../components/algorithm.jsx'
 
 class bubbleSort extends Component {
@@ -11,8 +11,8 @@ class bubbleSort extends Component {
           moreLink='https://en.wikipedia.org/wiki/Bubble_sort'
           gistId='973520942aa88f1a5b739623383b238d' />
       </div>
-    );
+    )
   }
 }
 
-export default bubbleSort;
+export default bubbleSort

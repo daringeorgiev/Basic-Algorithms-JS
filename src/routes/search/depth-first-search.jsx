@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import Algorithm from '../../components/algorithm.jsx';
+import React, {Component} from 'react'
+import Algorithm from '../../components/algorithm.jsx'
 
 class depthFirstSearch extends Component {
   render() {
@@ -11,8 +11,8 @@ class depthFirstSearch extends Component {
           moreLink='https://en.wikipedia.org/wiki/Depth-first_search'
           gistId='' />
       </div>
-    );
+    )
   }
 }
 
-export default depthFirstSearch;
+export default depthFirstSearch

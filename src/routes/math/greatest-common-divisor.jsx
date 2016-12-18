@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import Algorithm from '../../components/algorithm.jsx';
+import React, {Component} from 'react'
+import Algorithm from '../../components/algorithm.jsx'
 
 class greatestCommonDivisor extends Component {
   render() {
@@ -11,8 +11,8 @@ class greatestCommonDivisor extends Component {
           moreLink='https://en.wikipedia.org/wiki/Greatest_common_divisor'
           gistId='ad767926583e311db00dbbfdbbaad14b' />
       </div>
-    );
+    )
   }
 }
 
-export default greatestCommonDivisor;
+export default greatestCommonDivisor

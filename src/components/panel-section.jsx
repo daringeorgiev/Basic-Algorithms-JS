@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router';
+import React, {Component} from 'react'
+import {Link} from 'react-router'
 
 class panelSection extends Component {
   render() {
@@ -16,8 +16,8 @@ class panelSection extends Component {
           </div>
         </div>
       </section>
-    );
+    )
   }
 }
 
-export default panelSection;
+export default panelSection

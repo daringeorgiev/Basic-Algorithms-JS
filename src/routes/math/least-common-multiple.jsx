@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import Algorithm from '../../components/algorithm.jsx';
+import React, {Component} from 'react'
+import Algorithm from '../../components/algorithm.jsx'
 
 class leastCommonMultiple extends Component {
   render() {
@@ -11,8 +11,8 @@ class leastCommonMultiple extends Component {
           moreLink='https://en.wikipedia.org/wiki/Least_common_multiple'
           gistId='525d6d825ce6a73c405ff6c60b08e4ce' />
       </div>
-    );
+    )
   }
 }
 
-export default leastCommonMultiple;
+export default leastCommonMultiple

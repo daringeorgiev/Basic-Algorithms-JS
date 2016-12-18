@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {render} from 'react-dom';
-import NavbarInstance from './navbar.jsx';
+import React, {Component} from 'react'
+import {render} from 'react-dom'
+import NavbarInstance from './navbar.jsx'
 import Footer from './footer.jsx'
 
 class container extends Component {
@@ -11,8 +11,8 @@ class container extends Component {
         <NavbarInstance /> {this.props.children}
         <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default container;
+export default container

@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import Algorithm from '../../components/algorithm.jsx';
+import React, {Component} from 'react'
+import Algorithm from '../../components/algorithm.jsx'
 
 class binarySearch extends Component {
   render() {
@@ -11,8 +11,8 @@ class binarySearch extends Component {
           moreLink='https://en.wikipedia.org/wiki/Binary_search_algorithm'
           gistId='69962d849a25184a3e4171c131e68b2b' />
       </div>
-    );
+    )
   }
 }
 
-export default binarySearch;
+export default binarySearch

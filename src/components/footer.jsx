@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 
 class footer extends Component {
   render() {
@@ -25,8 +25,8 @@ class footer extends Component {
           <a href='https://daringeorgiev.github.io/' target='_blank'>Darin Georgiev</a>
         </small>
       </footer>
-    );
+    )
   }
 }
 
-export default footer;
+export default footer

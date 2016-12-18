@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {render} from 'react-dom';
+import React, {Component} from 'react'
+import {render} from 'react-dom'
 
 class mainWrapper extends Component {
   render() {
@@ -11,8 +11,8 @@ class mainWrapper extends Component {
           </div>
         </div>
       </main>
-    );
+    )
   }
 }
 
-export default mainWrapper;
+export default mainWrapper

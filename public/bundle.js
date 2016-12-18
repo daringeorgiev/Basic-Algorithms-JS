@@ -91,39 +91,39 @@
 	
 	var _bubbleSort2 = _interopRequireDefault(_bubbleSort);
 	
-	var _selectionSort = __webpack_require__(/*! ./routes/sorting/selection-sort.jsx */ 259);
+	var _selectionSort = __webpack_require__(/*! ./routes/sorting/selection-sort.jsx */ 250);
 	
 	var _selectionSort2 = _interopRequireDefault(_selectionSort);
 	
-	var _quickSort = __webpack_require__(/*! ./routes/sorting/quick-sort.jsx */ 250);
+	var _quickSort = __webpack_require__(/*! ./routes/sorting/quick-sort.jsx */ 251);
 	
 	var _quickSort2 = _interopRequireDefault(_quickSort);
 	
-	var _insertionSort = __webpack_require__(/*! ./routes/sorting/insertion-sort.jsx */ 251);
+	var _insertionSort = __webpack_require__(/*! ./routes/sorting/insertion-sort.jsx */ 252);
 	
 	var _insertionSort2 = _interopRequireDefault(_insertionSort);
 	
-	var _binarySearch = __webpack_require__(/*! ./routes/search/binary-search.jsx */ 252);
+	var _binarySearch = __webpack_require__(/*! ./routes/search/binary-search.jsx */ 253);
 	
 	var _binarySearch2 = _interopRequireDefault(_binarySearch);
 	
-	var _breadthFirstSearch = __webpack_require__(/*! ./routes/search/breadth-first-search.jsx */ 253);
+	var _breadthFirstSearch = __webpack_require__(/*! ./routes/search/breadth-first-search.jsx */ 254);
 	
 	var _breadthFirstSearch2 = _interopRequireDefault(_breadthFirstSearch);
 	
-	var _depthFirstSearch = __webpack_require__(/*! ./routes/search/depth-first-search.jsx */ 254);
+	var _depthFirstSearch = __webpack_require__(/*! ./routes/search/depth-first-search.jsx */ 255);
 	
 	var _depthFirstSearch2 = _interopRequireDefault(_depthFirstSearch);
 	
-	var _fibonacciNumbersSequence = __webpack_require__(/*! ./routes/math/fibonacci-numbers-sequence.jsx */ 255);
+	var _fibonacciNumbersSequence = __webpack_require__(/*! ./routes/math/fibonacci-numbers-sequence.jsx */ 256);
 	
 	var _fibonacciNumbersSequence2 = _interopRequireDefault(_fibonacciNumbersSequence);
 	
-	var _greatestCommonDivisor = __webpack_require__(/*! ./routes/math/greatest-common-divisor.jsx */ 256);
+	var _greatestCommonDivisor = __webpack_require__(/*! ./routes/math/greatest-common-divisor.jsx */ 257);
 	
 	var _greatestCommonDivisor2 = _interopRequireDefault(_greatestCommonDivisor);
 	
-	var _leastCommonMultiple = __webpack_require__(/*! ./routes/math/least-common-multiple.jsx */ 257);
+	var _leastCommonMultiple = __webpack_require__(/*! ./routes/math/least-common-multiple.jsx */ 258);
 	
 	var _leastCommonMultiple2 = _interopRequireDefault(_leastCommonMultiple);
 	
@@ -135,7 +135,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(/*! ./styles.scss */ 258);
+	__webpack_require__(/*! ./styles.scss */ 259);
 	
 	// Main routes
 	
@@ -29100,6 +29100,66 @@
 
 /***/ },
 /* 250 */
+/*!***********************************************!*\
+  !*** ./src/routes/sorting/selection-sort.jsx ***!
+  \***********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 248);
+	
+	var _algorithm2 = _interopRequireDefault(_algorithm);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var selectionSort = function (_Component) {
+	  _inherits(selectionSort, _Component);
+	
+	  function selectionSort() {
+	    _classCallCheck(this, selectionSort);
+	
+	    return _possibleConstructorReturn(this, (selectionSort.__proto__ || Object.getPrototypeOf(selectionSort)).apply(this, arguments));
+	  }
+	
+	  _createClass(selectionSort, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_algorithm2.default, {
+	          name: 'Selection Sort',
+	          description: 'In computer science, selection sort is a sorting algorithm, specifically an in-place comparison sort. It has O(n2) time complexity, making it inefficient on large lists, and generally performs worse than the similar insertion sort. Selection sort is noted for its simplicity, and it has performance advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited.',
+	          moreLink: 'https://en.wikipedia.org/wiki/Selection_sort',
+	          gistId: '35848fd336e3a6a0d4be830e7c3db2f0' })
+	      );
+	    }
+	  }]);
+	
+	  return selectionSort;
+	}(_react.Component);
+	
+	exports.default = selectionSort;
+
+/***/ },
+/* 251 */
 /*!*******************************************!*\
   !*** ./src/routes/sorting/quick-sort.jsx ***!
   \*******************************************/
@@ -29159,7 +29219,7 @@
 	exports.default = quickSort;
 
 /***/ },
-/* 251 */
+/* 252 */
 /*!***********************************************!*\
   !*** ./src/routes/sorting/insertion-sort.jsx ***!
   \***********************************************/
@@ -29219,7 +29279,7 @@
 	exports.default = insertionSort;
 
 /***/ },
-/* 252 */
+/* 253 */
 /*!*********************************************!*\
   !*** ./src/routes/search/binary-search.jsx ***!
   \*********************************************/
@@ -29279,7 +29339,7 @@
 	exports.default = binarySearch;
 
 /***/ },
-/* 253 */
+/* 254 */
 /*!****************************************************!*\
   !*** ./src/routes/search/breadth-first-search.jsx ***!
   \****************************************************/
@@ -29339,7 +29399,7 @@
 	exports.default = breadthFirstSearch;
 
 /***/ },
-/* 254 */
+/* 255 */
 /*!**************************************************!*\
   !*** ./src/routes/search/depth-first-search.jsx ***!
   \**************************************************/
@@ -29399,7 +29459,7 @@
 	exports.default = depthFirstSearch;
 
 /***/ },
-/* 255 */
+/* 256 */
 /*!********************************************************!*\
   !*** ./src/routes/math/fibonacci-numbers-sequence.jsx ***!
   \********************************************************/
@@ -29448,7 +29508,7 @@
 	          name: 'Fibonacci numbers',
 	          description: 'In mathematics, the Fibonacci numbers are the numbers in the following integer sequence, called the Fibonacci sequence, and characterized by the fact that every number after the first two is the sum of the two preceding ones. ',
 	          moreLink: 'https://en.wikipedia.org/wiki/Fibonacci_number',
-	          gistId: 'bfcf78e993f7a6425e93532731c5f4d4' })
+	          gistId: 'bfcf78e993f7a6425e93532731c5f4d4P' })
 	      );
 	    }
 	  }]);
@@ -29459,7 +29519,7 @@
 	exports.default = fibonacciNumbersSequence;
 
 /***/ },
-/* 256 */
+/* 257 */
 /*!*****************************************************!*\
   !*** ./src/routes/math/greatest-common-divisor.jsx ***!
   \*****************************************************/
@@ -29519,7 +29579,7 @@
 	exports.default = greatestCommonDivisor;
 
 /***/ },
-/* 257 */
+/* 258 */
 /*!***************************************************!*\
   !*** ./src/routes/math/least-common-multiple.jsx ***!
   \***************************************************/
@@ -29579,73 +29639,13 @@
 	exports.default = leastCommonMultiple;
 
 /***/ },
-/* 258 */
+/* 259 */
 /*!*************************!*\
   !*** ./src/styles.scss ***!
   \*************************/
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 259 */
-/*!***********************************************!*\
-  !*** ./src/routes/sorting/selection-sort.jsx ***!
-  \***********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _algorithm = __webpack_require__(/*! ../../components/algorithm.jsx */ 248);
-	
-	var _algorithm2 = _interopRequireDefault(_algorithm);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var selectionSort = function (_Component) {
-	  _inherits(selectionSort, _Component);
-	
-	  function selectionSort() {
-	    _classCallCheck(this, selectionSort);
-	
-	    return _possibleConstructorReturn(this, (selectionSort.__proto__ || Object.getPrototypeOf(selectionSort)).apply(this, arguments));
-	  }
-	
-	  _createClass(selectionSort, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_algorithm2.default, {
-	          name: 'Selection Sort',
-	          description: 'In computer science, selection sort is a sorting algorithm, specifically an in-place comparison sort. It has O(n2) time complexity, making it inefficient on large lists, and generally performs worse than the similar insertion sort. Selection sort is noted for its simplicity, and it has performance advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited.',
-	          moreLink: 'https://en.wikipedia.org/wiki/Selection_sort',
-	          gistId: '35848fd336e3a6a0d4be830e7c3db2f0' })
-	      );
-	    }
-	  }]);
-	
-	  return selectionSort;
-	}(_react.Component);
-	
-	exports.default = selectionSort;
 
 /***/ }
 /******/ ]);

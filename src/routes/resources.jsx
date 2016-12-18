@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 
 class resources extends Component {
   render() {
@@ -14,8 +14,8 @@ class resources extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default resources;
+export default resources

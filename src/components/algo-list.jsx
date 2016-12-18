@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {render} from 'react-dom';
-import {Link} from 'react-router';
+import React, {Component} from 'react'
+import {render} from 'react-dom'
+import {Link} from 'react-router'
 
 class algoList extends Component {
   render() {
@@ -16,8 +16,8 @@ class algoList extends Component {
                 <ul className='list-group'>
                   {this.props.algoList.map(function(item) {
                     // Generate item route
-                    let itemRoute = this.props.title.toLowerCase().replace(/ /g, '-');
-                    itemRoute += '/' + item.toLowerCase().replace(/ /g, '-');
+                    let itemRoute = this.props.title.toLowerCase().replace(/ /g, '-')
+                    itemRoute += '/' + item.toLowerCase().replace(/ /g, '-')
 
                     return <li className='list-group-item text-center' key={item}><Link to={itemRoute}>{item}</Link></li>
                   }.bind(this))}
@@ -27,8 +27,8 @@ class algoList extends Component {
           </div>
         </div>
       </main>
-    );
+    )
   }
 }
 
-export default algoList;
+export default algoList

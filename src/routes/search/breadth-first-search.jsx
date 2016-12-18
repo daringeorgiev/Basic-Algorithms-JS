@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import Algorithm from '../../components/algorithm.jsx';
+import React, {Component} from 'react'
+import Algorithm from '../../components/algorithm.jsx'
 
 class breadthFirstSearch extends Component {
   render() {
@@ -11,8 +11,8 @@ class breadthFirstSearch extends Component {
           moreLink='https://en.wikipedia.org/wiki/Breadth-first_search'
           gistId='' />
       </div>
-    );
+    )
   }
 }
 
-export default breadthFirstSearch;
+export default breadthFirstSearch

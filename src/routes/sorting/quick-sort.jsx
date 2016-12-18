@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import Algorithm from '../../components/algorithm.jsx'
 
 class quickSort extends Component {
@@ -11,8 +11,8 @@ class quickSort extends Component {
           moreLink='https://en.wikipedia.org/wiki/Quicksort'
           gistId='e113789c422892fea9b6bd9ecba5f634' />
       </div>
-    );
+    )
   }
 }
 
-export default quickSort;
+export default quickSort

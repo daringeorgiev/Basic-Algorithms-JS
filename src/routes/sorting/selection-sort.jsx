@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import Algorithm from '../../components/algorithm.jsx'
 
 class selectionSort extends Component {
@@ -11,8 +11,8 @@ class selectionSort extends Component {
           moreLink='https://en.wikipedia.org/wiki/Selection_sort'
           gistId='35848fd336e3a6a0d4be830e7c3db2f0' />
       </div>
-    );
+    )
   }
 }
 
-export default selectionSort;
+export default selectionSort

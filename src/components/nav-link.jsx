@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router';
+import React, {Component} from 'react'
+import {Link} from 'react-router'
 
 class navLink extends Component {
   render() {
-    let isActive = this.context.router.isActive(this.props.to, true);
-    let className = isActive ? 'active' : '';
+    let isActive = this.context.router.isActive(this.props.to, true)
+    let className = isActive ? 'active' : ''
 
     return (
       <li className={className}>
@@ -12,12 +12,12 @@ class navLink extends Component {
           {this.props.children}
         </Link>
       </li>
-    );
+    )
   }
 }
 
 navLink.contextTypes = {
   router: React.PropTypes.object
-};
+}
 
-export default navLink;
+export default navLink

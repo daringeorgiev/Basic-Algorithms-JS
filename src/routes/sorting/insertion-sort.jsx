@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import Algorithm from '../../components/algorithm.jsx';
+import React, {Component} from 'react'
+import Algorithm from '../../components/algorithm.jsx'
 
 class insertionSort extends Component {
   render() {
@@ -11,8 +11,8 @@ class insertionSort extends Component {
           moreLink='https://en.wikipedia.org/wiki/Insertion_sort'
           gistId='404f15f6e32e8130d1d21c5a7f085642' />
       </div>
-    );
+    )
   }
 }
 
-export default insertionSort;
+export default insertionSort
