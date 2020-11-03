@@ -2,6 +2,9 @@
   "name": "basic-algorithms-js",
   "version": "1.0.0",
   "description": "Some basic algorithms, written in JavaScript",
+  "engines": {
+    "node": "5.9.1"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
